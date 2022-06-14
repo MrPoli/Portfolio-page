@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+
+/* .text */
+
+main .text {
+  /* min-height: 14vh; */
+  padding: 2vh 0 2vh 0;
+  color: white;
+  font-size: xxx-large;
+  text-align: center;
+  font-family: monospace;
+}
+
+main .text div {
+  padding: 4px;
+}
+
+main .text span {
+  color: #e31b6d;
+}
+
+main .text div ~ div span {
+  display: inline-block;
+  background-color: #e31b6d;
+  color: black;
+  padding: 0 0.2em;
+}
+
+/* .wrapper */
+
+main .wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+main .wrapper div {
+  width: 50vw;
+  height: 86vh;
+}
+
+main .wrapper > div:first-child {
+  position: relative;
+  background-image: url("./Photos/photo-coder.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: inset 0 0 2000px 2000px rgba(05, 0, 0, 0.7);
+  padding-right: 5vw;
+  color: #e31b6d;
+  transition: 0.5s;
+}
+
+main .wrapper > div:first-child:hover {
+  cursor: pointer;
+  width: 82vw;
+  box-shadow: none;
+}
+
+main .wrapper > div:first-child div {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  text-align: center;
+  line-height: 5vh;
+  height: 5vh;
+  width: 0%;
+  background: black;
+  margin-right: 0.5vw;
+  font-family: monospace;
+  font-size: xx-large;
+}
+
+main .wrapper > div:first-child:hover div {
+  color: #03a062;
+}
+
+.animationLeftToRight {
+  animation: leftToRight 1s forwards;
+}
+
+@keyframes leftToRight {
+  100% {
+    width: 100%;
+  }
+}
+
+/* wrapper div-second-child */
+
+main .wrapper div:nth-child(2) {
+  position: relative;
+  background-image: url("./Photos/photo-lawyer.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  box-shadow: inset 0 0 2000px 2000px rgba(05, 0, 0, 0.7);
+  margin-left: 0.5vw;
+  transition: 0.5s;
+}
+
+main .wrapper > div:nth-child(2) div {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  text-align: center;
+  line-height: 5vh;
+  height: 5vh;
+  width: 0;
+  background: black;
+  font-family: "Meddon";
+  font-size: xx-large;
+  color: #e31b6d;
+}
+
+main .wrapper div:nth-child(2):hover {
+  cursor: pointer;
+  width: 82vw;
+  box-shadow: none;
+}
+
+main .wrapper > div:nth-child(2):hover div {
+  color: #4291ff;
+}
+
+.animationRightToLeft {
+  animation: rightToLeft 1s forwards;
+}
+
+@keyframes rightToLeft {
+  100% {
+    width: 100%;
+  }
+}
