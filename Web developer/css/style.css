@@ -23,11 +23,6 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-::before,
-::after {
-  box-sizing: border-box;
-}
-
 ul {
   list-style: none;
 }
@@ -41,6 +36,29 @@ ul {
 }
 .hidden {
   display: none !important;
+}
+
+/* back to top button - under 1200px */
+main .to-top-button {
+  position: fixed;
+  display: none;
+  right: 5vw;
+  bottom: 7vh;
+  padding: 10px 17.5px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 200ms;
+  z-index: 10;
+}
+
+main .to-top-button:hover {
+  transform: scale(1.1);
+  color: var(--main-color);
+  background-color: white;
+  border: 1px solid var(--main-color);
 }
 
 .main-content {
@@ -100,9 +118,7 @@ ul {
 .btn:hover {
   transform: scale(1.08);
 }
-.shadow-dark {
-  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
-}
+
 /* aside */
 
 aside {
@@ -181,6 +197,7 @@ aside .nav li a i {
   margin-right: 15px;
 }
 
+/* left-right nav button */
 aside #showHide {
   position: absolute;
   right: 0;
@@ -391,6 +408,7 @@ h3.my-profession {
   padding-bottom: 0;
 }
 .about .about-content .timeline .timeline-item::before {
+  box-sizing: border-box;
   content: "";
   width: 1px;
   position: absolute;
@@ -507,7 +525,7 @@ h3.my-profession {
 }
 
 .portfolio .portfolio-item:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   z-index: 1;
 }
 
@@ -558,6 +576,7 @@ h3.my-profession {
   text-align: center;
   margin-bottom: 60px;
 }
+
 .contact .contact-info-item .icon {
   display: inline-block;
 }
@@ -615,9 +634,16 @@ h3.my-profession {
   height: 50px;
   padding: 0 50px;
 }
+
+/* media queries */
+
 @media (max-width: 1199px) {
+  main .to-top-button {
+    display: block;
+  }
+
   aside {
-    left: -270px;
+    display: none;
   }
   .main-content {
     padding-left: 0;
@@ -627,12 +653,18 @@ h3.my-profession {
     margin-left: 0;
   }
 }
+
 @media (max-width: 991px) {
   .contact .contact-info-item,
   .portfolio .portfolio-item,
   .service .service-item {
     flex: 0 0 50%;
     max-width: 50%;
+  }
+
+  .portfolio .portfolio-item {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 
   .home .home-info {
@@ -643,6 +675,7 @@ h3.my-profession {
     display: none;
   }
 }
+
 @media (max-width: 767px) {
   .contact .contact-form .col-6,
   .contact .contact-info-item,
@@ -652,6 +685,10 @@ h3.my-profession {
   .about .about-content .education,
   .about .about-content .skills,
   .about .about-content .personal-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .about .about-content .personal-info .info-item {
     flex: 0 0 100%;
     max-width: 100%;
   }
