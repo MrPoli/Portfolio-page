@@ -1,3 +1,11 @@
+:root {
+  --main-color: #e31b6d;
+  --dev-color: #03a062;
+  --attorney-color: #4291ff;
+  --dev-font: monospace;
+  --attorney-font: "Meddon", serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,17 +15,18 @@ main {
   height: 100vh;
   width: 100vw;
   background-color: black;
+  overflow: hidden;
 }
 
 /* .text */
 
 main .text {
-  /* min-height: 14vh; */
+  min-height: 12vh;
   padding: 2vh 0 2vh 0;
   color: white;
   font-size: xxx-large;
   text-align: center;
-  font-family: monospace;
+  font-family: var(--dev-font);
 }
 
 main .text div {
@@ -25,12 +34,12 @@ main .text div {
 }
 
 main .text span {
-  color: #e31b6d;
+  color: var(--main-color);
 }
 
 main .text div ~ div span {
   display: inline-block;
-  background-color: #e31b6d;
+  background-color: var(--main-color);
   color: black;
   padding: 0 0.2em;
 }
@@ -55,7 +64,7 @@ main .wrapper > div:first-child {
   background-position: center;
   box-shadow: inset 0 0 2000px 2000px rgba(05, 0, 0, 0.7);
   padding-right: 5vw;
-  color: #e31b6d;
+  color: var(--main-color);
   transition: 0.5s;
 }
 
@@ -71,17 +80,21 @@ main .wrapper > div:first-child div {
   left: 0;
   transform: translate(0, -50%);
   text-align: center;
-  line-height: 5vh;
-  height: 5vh;
+  line-height: 7vh;
+  height: 7vh;
   width: 0%;
   background: black;
   margin-right: 0.5vw;
-  font-family: monospace;
+  font-family: var(--dev-font);
   font-size: xx-large;
 }
 
 main .wrapper > div:first-child:hover div {
-  color: #03a062;
+  color: var(--dev-color);
+}
+main .wrapper > div:first-child:hover button {
+  color: var(--dev-color);
+  border-color: var(--dev-color);
 }
 
 .animationLeftToRight {
@@ -93,7 +106,6 @@ main .wrapper > div:first-child:hover div {
     width: 100%;
   }
 }
-
 /* wrapper div-second-child */
 
 main .wrapper div:nth-child(2) {
@@ -113,13 +125,14 @@ main .wrapper > div:nth-child(2) div {
   right: 0;
   transform: translate(0, -50%);
   text-align: center;
-  line-height: 5vh;
-  height: 5vh;
+  line-height: 7vh;
+  height: 7vh;
   width: 0;
   background: black;
-  font-family: "Meddon";
-  font-size: xx-large;
-  color: #e31b6d;
+  font-family: var(--attorney-font);
+  font-size: x-large;
+  color: var(--main-color);
+  overflow: hidden;
 }
 
 main .wrapper div:nth-child(2):hover {
@@ -129,7 +142,31 @@ main .wrapper div:nth-child(2):hover {
 }
 
 main .wrapper > div:nth-child(2):hover div {
-  color: #4291ff;
+  color: var(--attorney-color);
+}
+main .wrapper > div:nth-child(2):hover button {
+  color: var(--attorney-color);
+  border-color: var(--attorney-color);
+}
+
+main .wrapper > div:nth-child(2) div div {
+  width: 100%;
+  color: var(--attorney-color);
+  animation: attorneyAnimation 2.5s forwards;
+  animation-delay: 0.8s;
+  background-color: black;
+}
+
+@keyframes attorneyAnimation {
+  0% {
+    width: 75%;
+  }
+  99% {
+    width: 25%;
+  }
+  100% {
+    width: 0;
+  }
 }
 
 .animationRightToLeft {
@@ -139,5 +176,151 @@ main .wrapper > div:nth-child(2):hover div {
 @keyframes rightToLeft {
   100% {
     width: 100%;
+  }
+}
+
+.btn {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  text-decoration: none;
+  transform: translateX(-50%);
+  cursor: pointer;
+  background-color: black;
+  color: var(--main-color);
+  border: 1px solid;
+  border-color: var(--main-color);
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 50%;
+}
+.btn a {
+  text-decoration: none;
+}
+.btn2 {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  background-color: black;
+  color: var(--main-color);
+  border: 1px solid;
+  border-color: var(--main-color);
+  font-size: 20px;
+  padding: 20px 27.5px;
+  border-radius: 50%;
+}
+
+.animationShake {
+  animation: shake 3s infinite;
+  animation-delay: 1s;
+}
+
+@keyframes shake {
+  0% {
+    transform: scale(1) translateX(-50%);
+  }
+  5% {
+    transform: scale(0.7) translateX(-50%);
+  }
+  10% {
+    transform: scale(1.5) translateX(-50%);
+  }
+  15% {
+    transform: scale(1.1) translateX(-50%);
+  }
+  20% {
+    transform: scale(1.4) translateX(-50%);
+  }
+  30% {
+    transform: scale(1.1) translateX(-50%);
+  }
+}
+
+@media (max-width: 1024px) {
+  main .text {
+    font-size: xx-large;
+  }
+
+  main .wrapper > div:first-child div {
+    font-size: x-large;
+  }
+  main .wrapper > div:nth-child(2) div {
+    font-size: x-large;
+  }
+}
+
+@media (max-width: 576px) {
+  main .text {
+    font-size: x-large;
+  }
+
+  main .wrapper > div:first-child div {
+    font-size: large;
+  }
+  main .wrapper > div:nth-child(2) div {
+    font-size: large;
+  }
+  main .wrapper > div:first-child div {
+    word-wrap: break-word;
+    height: 14vh;
+    line-height: 14vh;
+  }
+  main .wrapper > div:nth-child(2) div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-wrap: break-word;
+    height: 14vh;
+  }
+
+  .btn {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50%;
+  }
+
+  .btn2 {
+    font-size: 20px;
+    padding: 10px 17.5px;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  main .text {
+    font-size: x-large;
+  }
+
+  main .wrapper > div:first-child div {
+    font-size: large;
+  }
+  main .wrapper > div:nth-child(2) div {
+    font-size: large;
+  }
+  main .wrapper > div:first-child div {
+    word-wrap: break-word;
+    height: 14vh;
+    line-height: 14vh;
+  }
+  main .wrapper > div:nth-child(2) div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-wrap: break-word;
+    height: 14vh;
+  }
+
+  .btn {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50%;
+  }
+
+  .btn2 {
+    font-size: 20px;
+    padding: 10px 17.5px;
+    border-radius: 50%;
   }
 }
