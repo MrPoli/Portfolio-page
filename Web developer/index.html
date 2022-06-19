@@ -16,7 +16,9 @@
 <body>
   <!-- Main -->
   <main class="main-container">
-    <div class="to-Top-Button"><a href=""><button><i class="fa fa-solid fa-arrow-up "></i></button></a></div>
+    <!-- button back to top - under 1200px width -->
+    <a href="#home" class="to-top-button"><i class="fa fa-solid fa-arrow-up"></i></a>
+    <!-- aside -->
     <aside class="aside">
       <div class="logo">
         <a href=""><span>ŁP</span></a>
@@ -28,17 +30,19 @@
         <li><a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a></li>
         <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
       </ul>
+      <!-- left-right nav button -->
       <i class="fa fa-solid fa-arrow-right-arrow-left" id="showHide"></i></i>
     </aside>
     <div class="main-content">
+      <!-- Home -->
       <section class="home section" id="home">
         <div class="container">
           <div class="row">
             <div class="home-info">
               <h3 class="hello">Hello, my name is <span class="name">Łukasz Poliszuk</span></h3>
               <h3 class="my-profession">I'm a <span class="typing"></span></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quia eaque laborum voluptate
-                aperiam laboriosam sapiente? Omnis facilis cum hic.</p>
+              <p>Potrzebujesz programisty zajmującego się projektami związanymi z web developmentem? Jestem do Twojej
+                dyspozycji!</p>
               <a href="#about" class="btn about-me">About Me</a>
             </div>
             <div class="home-img padd-15">
@@ -47,6 +51,7 @@
           </div>
         </div>
       </section>
+      <!-- About -->
       <section class="about section" id="about">
         <div class="container">
           <div class="row">
@@ -58,10 +63,9 @@
             <div class="about-content padd-15">
               <div class="row">
                 <div class="about-text">
-                  <h3>I'm a Web Developer</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, ab corporis deleniti
-                    distinctio, debitis sed quae voluptatem facere beatae modi libero aliquam laudantium blanditiis
-                    cupiditate error dolores obcaecati cum fugiat.</p>
+                  <h3>My passion is Web Development</h3>
+                  <p>Moją przygodę z programowaniem zacząłem od technologii back-end'owych. Jednak to front-end oraz web
+                    development okazał się moją pasją. Uwielbiam to robić!</p>
                 </div>
               </div>
               <div class="row">
@@ -138,13 +142,14 @@
                   </div>
                 </div>
               </div>
+              <!-- IT Education -->
               <div class="row">
                 <div class="education padd-15">
                   <h3 class="title">IT Education</h3>
                   <div class="row">
                     <div class="timeline-box padd-15">
                       <div class="timeline shadow-dark">
-                        <!-- timeline item -->
+                        <!-- IT-Ed item -->
                         <div class="timeline-item">
                           <div class="circle-dot"></div>
                           <h3 class="timeline-date">
@@ -153,7 +158,7 @@
                           <h4 class="timeline-title">Basics of programming </h4>
                           <p class="timeline-text">ALX</p>
                         </div>
-                        <!-- timeline item -->
+                        <!-- IT-Ed item -->
                         <div class="timeline-item">
                           <div class="circle-dot"></div>
                           <h3 class="timeline-date">
@@ -163,7 +168,7 @@
                             Programming of business applications</h4>
                           <p class="timeline-text">University of Vocational Education in Wrocław</p>
                         </div>
-                        <!-- timeline item -->
+                        <!-- IT-Ed item -->
                         <div class="timeline-item">
                           <div class="circle-dot"></div>
                           <h3 class="timeline-date">
@@ -176,12 +181,13 @@
                     </div>
                   </div>
                 </div>
+                <!-- Non-IT Education -->
                 <div class="non-it-education padd-15">
                   <h3 class="title">Non-IT Education</h3>
                   <div class="row">
                     <div class="timeline-box padd-15">
                       <div class="timeline shadow-dark">
-                        <!-- timeline item -->
+                        <!-- Non-IT Ed item -->
                         <div class="timeline-item">
                           <div class="circle-dot"></div>
                           <h3 class="timeline-date">
@@ -190,7 +196,7 @@
                           <h4 class="timeline-title">Master of Law</h4>
                           <p class="timeline-text">John Paul II Catholic University of Lublin</p>
                         </div>
-                        <!-- timeline item -->
+                        <!-- Non-IT Ed item -->
                         <div class="timeline-item">
                           <div class="circle-dot"></div>
                           <h3 class="timeline-date">
@@ -199,14 +205,14 @@
                           <h4 class="timeline-title">Legal Application</h4>
                           <p class="timeline-text">District Chamber of Attorneys-at-law</p>
                         </div>
-                        <!-- timeline item -->
+                        <!-- Non-IT Ed item -->
                         <div class="timeline-item">
                           <div class="circle-dot"></div>
                           <h3 class="timeline-date">
                             <i class="fa fa-calendar"></i> 2018
                           </h3>
                           <h4 class="timeline-title">Attorney-at-law exam</h4>
-                          <p class="timeline-text">Ministry of Justice/District Chamber of Attorneys-at-law </p>
+                          <p class="timeline-text">District Chamber of Attorneys-at-law </p>
                         </div>
                       </div>
                     </div>
@@ -217,7 +223,7 @@
           </div>
         </div>
       </section>
-      <!-- services -->
+      <!-- Services -->
       <section class="service services-section" id="services">
         <div class="container">
           <div class="row">
@@ -226,72 +232,66 @@
             </div>
           </div>
           <div class="row">
-            <!-- Services item Start -->
+            <!-- service item -->
             <div class="service-item padd-15">
               <div class="service-item-inner">
                 <div class="icon">
                   <i class="fa fa-palette"></i>
                 </div>
                 <h4>Web Design</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, reiciendis.</p>
+                <p>Projektowanie stron i serwisów internetowych.</p>
               </div>
             </div>
-            <!-- Services item End -->
-            <!-- Services item Start -->
+            <!-- service item -->
             <div class="service-item padd-15">
               <div class="service-item-inner">
                 <div class="icon">
                   <i class="fa fa-laptop-code"></i>
                 </div>
                 <h4>Web Development</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, reiciendis.</p>
+                <p>Tworzenie stron internetowych na podstawie gotowych projektów.</p>
               </div>
             </div>
-            <!-- Services item End -->
-            <!-- Services item Start -->
+            <!-- service item -->
             <div class="service-item padd-15">
               <div class="service-item-inner">
                 <div class="icon">
                   <i class="fa fa-code"></i>
                 </div>
                 <h4>Web Application Development</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, reiciendis.</p>
+                <p>Tworzenie pełnoprawnych aplikacji internetowych.</p>
               </div>
             </div>
-            <!-- Services item End -->
-            <!-- Services item Start -->
+            <!-- service item -->
             <div class="service-item padd-15">
               <div class="service-item-inner">
                 <div class="icon">
                   <i class="fa fa-mobile-alt"></i>
                 </div>
                 <h4>Adaptation to mobile devices</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, reiciendis.</p>
+                <p>Dostosowanie stron i aplikacji internetowych do urządzeń mobilnych.</p>
               </div>
             </div>
-            <!-- Services item End -->
-            <!-- Services item Start -->
+            <!-- service item -->
             <div class="service-item padd-15">
               <div class="service-item-inner">
                 <div class="icon">
                   <i class="fa fa-solid fa-database"></i>
                 </div>
                 <h4>Database support</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, reiciendis.</p>
+                <p>Aplikacje obejmujące pełną obsługę baz danych.</p>
               </div>
             </div>
-            <!-- Services item End -->
-            <!-- Services item Start -->
+            <!-- service item -->
             <div class="service-item padd-15">
               <div class="service-item-inner">
                 <div class="icon">
                   <i class="fa fa-solid fa-gear"></i>
                 </div>
                 <h4>API support</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, reiciendis.</p>
+                <p>Połączenie aplikacji oraz stron internetowych z informacjiami z API.</p>
               </div>
             </div>
-            <!-- Services item End -->
           </div>
         </div>
       </section>
@@ -309,7 +309,7 @@
             </div>
           </div>
           <div class="row">
-            <!-- portfolio item s-->
+            <!-- portfolio item-->
             <div class="portfolio-item padd-15">
               <div class="portfolio-item-inner shadow-dark">
                 <a href="https://github.com/MrPoli/Strona-Rzecki" target="_blank">
@@ -321,8 +321,7 @@
               </div>
             </div>
           </div>
-          <!-- p item end -->
-          <!-- portfolio item s-->
+          <!-- portfolio item-->
           <div class="portfolio-item padd-15">
             <div class="portfolio-item-inner shadow-dark">
               <a href="https://github.com/MrPoli/Title-page">
@@ -334,8 +333,7 @@
             </div>
           </div>
         </div>
-        <!-- p item end -->
-        <!-- portfolio item s-->
+        <!-- portfolio item-->
         <div class="portfolio-item padd-15 ">
           <div class="portfolio-item-inner shadow-dark">
             <a href="https://github.com/MrPoli">
@@ -347,8 +345,7 @@
           </div>
         </div>
     </div>
-    <!-- p item end -->
-    <!-- portfolio item s-->
+    <!-- portfolio item-->
     <div class="portfolio-item padd-15">
       <div class="portfolio-item-inner shadow-dark">
         <a href="https://github.com/MrPoli/Kalkulator">
@@ -360,7 +357,6 @@
       </div>
     </div>
     </div>
-    <!-- p item end -->
     </div>
     </div>
     </section>
@@ -374,34 +370,31 @@
         </div>
         <h3 class="contact-title padd-15">Have You Any Questions?</h3>
         <div class="row">
-          <!-- contact info item -->
+          <!-- contact item -->
           <div class="contact-info-item padd-15">
             <div class="icon"><i class="fa fa-phone"></i></div>
             <h4>Call Me</h4>
             <p>+48 790 266 086</p>
           </div>
-          <!-- contact info item end -->
-          <!-- contact info item -->
+          <!-- contact item -->
           <div class="contact-info-item padd-15">
             <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
             <h4>Office</h4>
             <p>Lwowska 59, Chełm</p>
           </div>
-          <!-- contact info item end -->
-          <!-- contact info item -->
+          <!-- contact item -->
           <div class="contact-info-item padd-15">
             <div class="icon"><i class="fa fa-envelope"></i></div>
             <h4>Email</h4>
             <p>lukasz.poliszuk@gmail.com</p>
           </div>
-          <!-- contact info item end -->
-          <!-- contact info item -->
+          <!-- contact item -->
           <div class="contact-info-item padd-15">
             <div class="icon"><i class="fa fa-brands fa-github"></i></div>
             <h4>GitHub</h4>
             <p>MrPoli</p>
           </div>
-          <!-- contact info item end -->
+          <!-- contact item -->
         </div>
         <h3 class="contact-title padd-15">SEND ME A MESSAGE</h3>
         <!-- contact form -->
